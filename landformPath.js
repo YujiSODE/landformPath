@@ -10,6 +10,30 @@
 //Methods that generates imaginary landform contour path
 /*
 *=== Synopsis ===
+* - `context.landformPathCurves(x,y,r,dr,rad0);`
+*   method that generates imaginary landform contour path and returns modified array of radii.
+*   this method using a quadratic Bézier curve to connect paths.
+*
+* - `context.landformPathLines=function(x,y,r,dr,rad0);`
+*   method that generates imaginary landform contour path and returns modified array of radii.
+*   this method using a line to connect paths.
+*--- Parameters ---
+*   - context: CanvasRenderingContext2D
+*   - x and y: coordinates of the center
+*   - r: an array of non-negative lengths for radii
+*   - dr: an optional radius expansion
+*     0 is default value
+*   - rad0: an optional value for initial angle in radians
+*     0 is default value
+*------------------
+* - `context.coveringCircle(X,Y,R);`
+*   method that estimates properties of a circle covering the other circles.
+*   returned value is [x,y,radius].
+*--- Parameters ---
+*   - context: CanvasRenderingContext2D
+*   - X: an array of horizontal center coordicates for inner circle
+*   - Y: an array of vertical center coordicates for inner circle
+*   - R: an array of radii for inner circles
 */
 //============================================================================
 //method that generates imaginary landform contour path and returns modified array of radii
@@ -103,22 +127,25 @@ window.CanvasRenderingContext2D.prototype.coveringCircle=function(X,Y,R){
 	// - X: an array of horizontal center coordicates for inner circle
 	// - Y: an array of vertical center coordicates for inner circle
 	// - R: an array of radii for inner circles
-	var xO=0,yO=0,rO=0,i=0,n=X.length,radii=[];
+	var xO=0,yO=0,rO=0,i=0,n=0,
+		nX=X.length,nY=Y.length,nR=R.length,
+		radii=[];
+	n=nX*nY*nR>0?Math.min(nX,nY,nR):0;
 	//### center coordinates of covering circle ###
 	while(i<n){
 		xO+=X[i];
 		yO+=Y[i];
 		i+=1;
 	}
-	xO=xO/n;
-	yO=yO/n;
+	xO=n!=0?xO/n:0;
+	yO=n!=0?yO/n:0;
 	//### the max radius of covering circle ###
 	i=0;
 	while(i<n){
 		radii.push(Math.sqrt((X[i]-xO)**2+(Y[i]-yO)**2)+R[i]);
 		i+=1;
 	}
-	rO=radii.sort((a,b)=>b-a)[0];
+	rO=n!=0?radii.sort((a,b)=>b-a)[0]:0;
 	return [xO,yO,rO];
 };
 
