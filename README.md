@@ -7,5 +7,6 @@ GitHub: https://github.com/YujiSODE/landformPath
 ______
 ## 1. Script
 - `landformPath.js`
+- `landformPath_tools.js`
 
 ## 2. Synopsis
