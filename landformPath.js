@@ -1,5 +1,5 @@
 /*landformPath
-*landformPath.js
+* landformPath.js
 *===================================================================
 *	Copyright (c) 2018 Yuji SODE <yuji.sode@gmail.com>
 *
@@ -7,7 +7,7 @@
 *	See LICENSE or http://opensource.org/licenses/mit-license.php
 *===================================================================
 */
-//Methods that generates imaginary landform contour path
+//Methods that generates imaginary landform contour paths
 /*
 *=== Synopsis ===
 * - `context.landformPathCurves(x,y,r,dr,rad0);`
@@ -18,22 +18,22 @@
 *   method that generates imaginary landform contour path and returns modified array of radii.
 *   this method using a line to connect paths.
 *--- Parameters ---
-*   - context: CanvasRenderingContext2D
-*   - x and y: coordinates of the center
-*   - r: an array of non-negative lengths for radii
-*   - dr: an optional radius expansion
+*   - `context`: CanvasRenderingContext2D
+*   - `x` and `y`: coordinates of the center
+*   - `r`: an array of non-negative lengths for radii
+*   - `dr`: an optional radius expansion
 *     0 is default value
-*   - rad0: an optional value for initial angle in radians
+*   - `rad0`: an optional value for initial angle in radians
 *     0 is default value
 *------------------
 * - `context.coveringCircle(X,Y,R);`
 *   method that estimates properties of a circle covering the other circles.
-*   returned value is [x,y,radius].
+*   returned value is `[x,y,radius]`.
 *--- Parameters ---
-*   - context: CanvasRenderingContext2D
-*   - X: an array of horizontal center coordicates for inner circle
-*   - Y: an array of vertical center coordicates for inner circle
-*   - R: an array of radii for inner circles
+*   - `context`: CanvasRenderingContext2D
+*   - `X`: an array of horizontal center coordicates for inner circle
+*   - `Y`: an array of vertical center coordicates for inner circle
+*   - `R`: an array of radii for inner circles
 */
 //============================================================================
 //method that generates imaginary landform contour path and returns modified array of radii
