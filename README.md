@@ -7,6 +7,6 @@ GitHub: https://github.com/YujiSODE/landformPath
 ______
 ## 1. Script
 - `landformPath.js`: CanvasRenderingContext2D methods
-- `landformPath_tools.js`
+- `landformPath_tools.js`: Tool for drawing imaginary landform contour lines
 
 ## 2. Synopsis
