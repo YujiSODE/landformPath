@@ -6,7 +6,7 @@ GitHub: https://github.com/YujiSODE/landformPath
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 ______
 ## 1. Script
-- `landformPath.js`
+- `landformPath.js`: CanvasRenderingContext2D methods
 - `landformPath_tools.js`
 
 ## 2. Synopsis
