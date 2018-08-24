@@ -79,7 +79,7 @@ function getLandform(canvas){
 				_P=linesN>1?P.map(a=>a):arr.map(a=>a);
 				F.R.push(_P.sort((a,b)=>b-a)[0]);
 			}
-			P=i>0?ctx.landformPathCurves(x,y,P,5):ctx.landformPathCurves(x,y,arr,5);
+			P=i>0?ctx.landformPathCurves(x,y,P,10):ctx.landformPathCurves(x,y,arr,10);
 			i+=1;
 		}
 		ctx.stroke();
@@ -89,7 +89,7 @@ function getLandform(canvas){
 			ctx.strokeStyle="#f00";
 			ctx.lineWidth=1.0;
 			ctx.beginPath();
-			ctx.landformPathCurves(x,y,arr2[i],0);
+			ctx.landformPathCurves(x,y,arr2[i]);
 			ctx.stroke();
 			i+=1;
 		}
@@ -123,7 +123,7 @@ function getLandform(canvas){
 				_P=linesN>1?P.map(a=>a):arr.map(a=>a);
 				F.R.push(_P.sort((a,b)=>b-a)[0]);
 			}
-			P=i>0?ctx.landformPathLines(x,y,P,5):ctx.landformPathLines(x,y,arr,5);
+			P=i>0?ctx.landformPathLines(x,y,P,10):ctx.landformPathLines(x,y,arr,10);
 			i+=1;
 		}
 		ctx.stroke();
@@ -133,7 +133,7 @@ function getLandform(canvas){
 			ctx.strokeStyle="#f00";
 			ctx.lineWidth=1.0;
 			ctx.beginPath();
-			ctx.landformPathLines(x,y,arr2[i],0);
+			ctx.landformPathLines(x,y,arr2[i]);
 			ctx.stroke();
 			i+=1;
 		}
