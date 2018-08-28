@@ -26,9 +26,13 @@
     <p>Tools that generates imaginary landform contour paths.<br>This program is web version of landformPath.</p>
     <canvas id='landformPathCvs' width=200 height=200></canvas>
     <div id='formDiv'>
-      <form id='landformPathForm'>
+      <form id='landformPathOptions'>
         <!-- check if fix coordinates -->
         <label>Fix coordinates<input type='checkbox' id='fixed'></label>
+        <!-- generative art mode -->
+        <label>Generative art<input type='checkbox' id='genArtMode'></label>
+      </form>
+      <form id='landformPathForm'>
         <!-- input for randomness -->
         <fieldset>
           <legend>Randomness</legend>
@@ -49,7 +53,7 @@
           @value1,value2,...
           @value1,value2,...
       -->
-      <label>Log of initial values
+      <label>Log of initial radii
         <br><textarea id='initialValues' placeholder='@0,0,...'></textarea>
       </label>
       <h2>Download</h2>

@@ -3,7 +3,6 @@ canvas{
     border:1px solid #000;
     resize:both;
     background:#fff;
-    overflow:scroll;
 }
 #formDiv{
     border:1px solid #000;
